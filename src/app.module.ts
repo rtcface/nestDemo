@@ -9,7 +9,10 @@ import { GraphQLModule } from '@nestjs/graphql';
   
   imports: [   
     UsersModule, 
-    MongooseModule.forRoot('mongodb://declara:4rqu1m1d3$@localhost:27017'),
+    MongooseModule.forRoot('mongodb://localhost:27017'),
+    GraphQLModule.forRoot({
+      autoSchemaFile: true,
+    }),
    ],
   controllers: [AppController],
   providers: [AppService],

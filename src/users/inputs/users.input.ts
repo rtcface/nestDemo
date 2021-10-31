@@ -52,6 +52,6 @@ export class UpdateUserInput {
 export class FindUserInput {
     @Field()
     readonly id: string;
+  
 }
-
 

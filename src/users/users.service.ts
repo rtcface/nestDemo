@@ -4,7 +4,7 @@ import { Model,Types } from 'mongoose';
 import { InjectModel } from '@nestjs/mongoose';
 // import the user schema
 import { Users } from './schemas/users.schema';
-import { FindUserInput, UpdateUserInput } from './inputs/users.input';
+import { FindUserInput, UpdateUserInput, CreateUserInput } from './inputs/users.input';
 
 @Injectable()
 export class UsersService {
@@ -20,7 +20,7 @@ export class UsersService {
         return await this.userModel.findById(user.id).exec();
     }   
     // create async function to create a user
-    async create(user: Users): Promise<Users> {
+    async create(user: CreateUserInput): Promise<Users> {
         return await new this.userModel(user).save();
     }
     // create async function to update a user
