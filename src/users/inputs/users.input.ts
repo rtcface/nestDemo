@@ -55,3 +55,12 @@ export class FindUserInput {
   
 }
 
+
+@InputType()
+export class FindLoginUserInput {
+    @Field()
+    readonly mail: string;
+    @Field()
+    readonly pass: string;
+  
+}

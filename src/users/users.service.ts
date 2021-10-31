@@ -18,7 +18,11 @@ export class UsersService {
     // create async function to find a user by mongoose id
     async findOne(user:FindUserInput): Promise<Users> {
         return await this.userModel.findById(user.id).exec();
-    }   
+    }    
+    // create assync function for find a user by mail
+    async findByMail(mail: string): Promise<Users> {
+        return await this.userModel.findOne({mail: mail}).exec();
+    }
     // create async function to create a user
     async create(user: CreateUserInput): Promise<Users> {
         return await new this.userModel(user).save();
