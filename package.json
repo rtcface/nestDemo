@@ -29,6 +29,8 @@
     "@nestjs/passport": "^8.0.1",
     "@nestjs/platform-express": "^8.0.0",
     "apollo-server-express": "^3.4.0",
+    "crypto-js": "^4.1.1",
+    "fs": "^0.0.1-security",
     "graphql": "^15.7.2",
     "mongoose": "^6.0.12",
     "passport": "^0.4.1",
